@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ZConfig</id>
+    <version>$version$</version>
+    <authors>Matthew Malkin</authors>
+    <licenseUrl>https://raw.githubusercontent.com/m3zercat/ZConfig/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/m3zercat/ZConfig</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Lightweight .NET configuration management library.</description>
+    <copyright>Copyright Zercat Technologies Ltd</copyright>
+    <tags>configuration</tags>
+  </metadata>
+  <files>
+     <file src="ZConfigParser\bin\Release\ZConfigParser.dll" target="lib\net452" />
+  </files>
+</package>
