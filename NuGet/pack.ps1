@@ -12,4 +12,4 @@ $content | Out-File $root\nuget\ZConfig.compiled.nuspec
 
 & $root\NuGet\NuGet.exe pack $root\nuget\ZConfig.compiled.nuspec
 
-Push-AppveyorArtifact -FileName "$root\ZConfig.$versionStr.nupkg" -DeploymentName "ZConfigNuGetPackage"
+Push-AppveyorArtifact "$root\ZConfig.$versionStr.nupkg" -DeploymentName "ZConfigNuGetPackage"
