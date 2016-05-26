@@ -35,9 +35,9 @@ artifacts:
 
 
 
-#deploy:
-#  provider: NuGet
-#  api_key:
-#    secure: ZMlpQhGj5wLYQ+kCa34FwWukeodzUWSvA8kV9QKyUgQf0CqJnOWSaZeVmFEsYM2e
-#  skip_symbols: false
-#  artifact: /.*\.nupkg/
+deploy:
+  provider: NuGet
+  api_key:
+    secure: ZMlpQhGj5wLYQ+kCa34FwWukeodzUWSvA8kV9QKyUgQf0CqJnOWSaZeVmFEsYM2e
+  skip_symbols: false
+  artifact: ZConfig.{version}.nupkg
