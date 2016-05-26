@@ -11,6 +11,3 @@ $content = $content -replace '\$version\$',$versionStr
 $content | Out-File $root\nuget\ZConfig.compiled.nuspec
 
 & $root\NuGet\NuGet.exe pack $root\nuget\ZConfig.compiled.nuspec
-
-cd $root
-dir

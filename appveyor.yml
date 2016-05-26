@@ -31,7 +31,7 @@ after_test:
   - ps: .\nuget\pack.ps1
 
 artifacts:
-  - path: "**\\ZConfig.{version}.nupkg"
+  - path: .\ZConfig.{version}.nupkg
     name: ZConfigNuGetPackage
   - path: "**\\*.nupkg"
     name: ALLPKG
