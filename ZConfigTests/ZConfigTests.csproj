@@ -6,8 +6,8 @@
     <ProjectGuid>{5AA797A7-73AD-4C40-9ADC-29D24572D910}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ZConfigTests</RootNamespace>
-    <AssemblyName>ZConfigTests</AssemblyName>
+    <RootNamespace>ZConfig</RootNamespace>
+    <AssemblyName>ZConfig.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -52,13 +52,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Parser\Tests\ParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ZConfigParserTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ZConfigParser\ZConfigParser.csproj">
+    <ProjectReference Include="..\ZConfig\ZConfig.csproj">
       <Project>{35a3f961-a297-4bd2-a881-2d3448e532b3}</Project>
-      <Name>ZConfigParser</Name>
+      <Name>ZConfig</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

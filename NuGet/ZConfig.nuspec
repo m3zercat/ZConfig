@@ -12,6 +12,6 @@
     <tags>configuration</tags>
   </metadata>
   <files>
-     <file src="..\ZConfigParser\bin\Release\ZConfigParser.dll" target="lib\net452" />
+     <file src="..\ZConfig\bin\Release\ZConfig.dll" target="lib\net452" />
   </files>
 </package>

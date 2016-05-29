@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ZConfigParser
+namespace ZConfig.Parser
 {
-    public class Configuration : Dictionary<String, ConfigSection>
+    public class Configuration : Dictionary<String, IRawConfigSection>, IRawConfiguration
     {
         internal Configuration(String[] configFileContent) : base()
         {

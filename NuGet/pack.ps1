@@ -1,6 +1,6 @@
 $root = (split-path -parent $MyInvocation.MyCommand.Definition) + '\..'
 Write-Host "Root: $root"
-$version = [System.Reflection.Assembly]::LoadFile("$root\ZConfigParser\bin\Release\ZConfigParser.dll").GetName().Version
+$version = [System.Reflection.Assembly]::LoadFile("$root\ZConfig\bin\Release\ZConfig.dll").GetName().Version
 $versionStr = "{0}.{1}.{2}" -f ($version.Major, $version.Minor, $version.Build)
 
 Write-Host "Setting .nuspec version tag to $versionStr"

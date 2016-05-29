@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ZConfigParser
+namespace ZConfig.Parser
 {
-    public class ConfigSection
+    public class ConfigSection : IRawConfigSection
     {
         public String Name { get; }
 
         public String InheritsFromSection { get; } = null;
 
-        public Dictionary<String, String> Lines { get; } = new Dictionary<String, String>();
+        public IDictionary<String, String> Lines { get; } = new Dictionary<String, String>();
 
         internal ConfigSection(IEnumerable<String> sectionConfig)
         {

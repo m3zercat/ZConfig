@@ -1,6 +1,6 @@
 using System;
 
-namespace ZConfigParser
+namespace ZConfig.Parser
 {
     public class ConfigurationParseException : Exception
     {

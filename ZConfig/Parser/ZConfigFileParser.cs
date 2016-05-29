@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ZConfigParser
+namespace ZConfig.Parser
 {
-    public class ZConfigFileParser
+    public class ZConfigFileParser : IRawConfigLoader
     {
-        private String _filePath;
+        private readonly String _filePath;
 
         /// <summary>
         /// Creates a parser that can read the zconfig formatted config file from disk and return a object based representation
@@ -24,9 +20,9 @@ namespace ZConfigParser
             _filePath = filePath;
         }
         
-        public Configuration Read()
+        public IRawConfiguration Read()
         {
-            var lines = File.ReadAllLines(_filePath);
+            String[] lines = File.ReadAllLines(_filePath);
             return new Configuration(lines);
         }
 
