@@ -4,6 +4,6 @@ namespace ZConfig
 {
     public interface IConfigInterpreter
     {
-        IConfiguration Interpret(IRawConfiguration config, String activeSection);
+        IConfiguration Interpret(IRawConfiguration rawConfig, String activeSection);
     }
 }

@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigManager.cs" />
+    <Compile Include="Configuration.cs" />
     <Compile Include="Interfaces\IConfigInterpreter.cs" />
     <Compile Include="Interfaces\IConfigSection.cs" />
     <Compile Include="Interfaces\IConfiguration.cs" />
