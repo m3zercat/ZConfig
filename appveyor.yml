@@ -1,8 +1,10 @@
 version: 1.0.{build}
+platform: Any CPU
+configuration: Release
 
 assembly_info:
   patch: true
-  file: AssemblyInfo.*
+  file: '**\AssemblyInfo.*'
   assembly_version: "{version}"
   assembly_file_version: "{version}"
   assembly_informational_version: "{version}"
@@ -12,8 +14,8 @@ nuget:
   project_feed: true
   disable_publish_on_pr: true
 
-platform: Any CPU
-configuration: Release
+before_build:
+  - ps: .\nuget\restore.ps1
 
 build:
   parallel: true
