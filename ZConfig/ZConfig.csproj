@@ -34,8 +34,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IConfigInterpreter.cs" />
+    <Compile Include="Interfaces\IConfigSection.cs" />
+    <Compile Include="Interfaces\IConfiguration.cs" />
     <Compile Include="Interfaces\IRawConfigSection.cs" />
     <Compile Include="Interfaces\IRawConfiguration.cs" />
+    <Compile Include="Interpretation\DefaultInterpreter.cs" />
     <Compile Include="Parser\ConfigSection.cs" />
     <Compile Include="Parser\Configuration.cs" />
     <Compile Include="Parser\ConfigurationParseException.cs" />
@@ -43,6 +47,7 @@
     <Compile Include="Parser\ZConfigFileParser.cs" />
     <Compile Include="Interfaces\IRawConfigLoader.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
