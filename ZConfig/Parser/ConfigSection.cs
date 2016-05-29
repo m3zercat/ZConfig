@@ -32,7 +32,20 @@ namespace ZConfig.Parser
                 {
                     throw new ConfigurationParseException("Incorrect number of string parts from split!", parts);
                 }
-                Lines.Add(CleanVariableName(parts[0]), CleanVariableValue(parts[1]));
+                String variableName = CleanVariableName(parts[0]);
+                String variableValue = CleanVariableValue(parts[1]);
+                try
+                {
+                    Lines.Add(variableName, variableValue);
+                }
+                catch (ArgumentException ae)
+                {
+                    if (ae.Message.Contains("An item with the same key has already been added."))
+                    {
+                        throw new ConfigurationParseException($"Duplicate variable '{variableName}' in section '{Name}'", ae);
+                    }
+                    throw;
+                }
             }
 
         }

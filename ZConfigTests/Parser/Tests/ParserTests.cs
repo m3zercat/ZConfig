@@ -146,5 +146,27 @@ namespace ZConfig.Parser.Tests
             Assert.AreEqual("b", sectionA.Lines["A1"], "Section A variable 'A1' did not contain value 'b'");
         }
 
+        [TestMethod]
+        public void T011_WhenIReadAConfigFileContainingAtLeastVariablesWithTheSameNameInOneSectionAnExceptionIsThrown()
+        {
+            File.WriteAllText(@".\t011.zcf", @"[SectionA]
+                                                A1 = b
+                                                A1 = !!
+                                                A2 = a=c");
+            IRawConfigLoader zcf = new ZConfigFileParser(@".\t011.zcf");
+            try
+            {
+                zcf.Read();
+            }
+            catch (ConfigurationParseException ex)
+            {
+                if (ex.Message == "Duplicate variable 'A1' in section 'SectionA'")
+                {
+                    return;
+                }
+            }
+            Assert.Fail("Should not reach this point");
+        }
+
     }
 }
