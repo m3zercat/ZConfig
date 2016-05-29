@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NSubstitute, Version=1.10.0.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\NSubstitute.1.10.0.0\lib\net45\NSubstitute.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -52,6 +56,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Helpers\RawConfigSectionBuilder.cs" />
+    <Compile Include="Helpers\RawConfigurationBuilder.cs" />
     <Compile Include="Interpretation\Tests\InterpretationTests.cs" />
     <Compile Include="Parser\Tests\ParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +67,9 @@
       <Project>{35a3f961-a297-4bd2-a881-2d3448e532b3}</Project>
       <Name>ZConfig</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
