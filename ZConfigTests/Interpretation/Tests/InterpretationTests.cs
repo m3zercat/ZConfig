@@ -10,7 +10,6 @@ namespace ZConfig.Interpretation.Tests
     public class InterpretationTests
     {
         [TestMethod]
-        [ExpectedException(typeof(FileNotFoundException))]
         public void T001_WhenIDoSomething()
         {
             IRawConfigSection rawSection = (new RawConfigSectionBuilder())
