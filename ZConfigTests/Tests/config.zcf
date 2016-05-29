@@ -1,0 +1,13 @@
+﻿[default]
+Var1 = cheese
+Var2 = mouse
+Var3 = chicken
+
+[environment1]
+AddedVar = mongoose
+
+[environment2]
+Var1 = caterpillar
+
+[environment3]
+Var2 = env3

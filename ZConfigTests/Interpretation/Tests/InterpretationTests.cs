@@ -10,7 +10,6 @@ namespace ZConfig.Interpretation.Tests
     public class InterpretationTests
     {
         [TestMethod]
-        [Ignore]
         [ExpectedException(typeof(FileNotFoundException))]
         public void T001_WhenIDoSomething()
         {
@@ -22,7 +21,9 @@ namespace ZConfig.Interpretation.Tests
             IRawConfiguration rawConfig = (new RawConfigurationBuilder())
                 .WithSection(rawSection)
                 .Build();
-            Assert.Inconclusive("No idea what i did!");
+            IConfigInterpreter interpreter = ConfigManager.Interpreter;
+            IConfiguration config = interpreter.Interpret(rawConfig, "SampleSection");
+            Assert.AreEqual("a", config["Var1"]);
         }
     }
 }

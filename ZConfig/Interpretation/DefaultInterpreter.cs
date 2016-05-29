@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ZConfig.Interpretation
 {
-    internal class DefaultInterpreter : IConfigInterpreter
+    public class DefaultInterpreter : IConfigInterpreter
     {
+        public IConfiguration Interpret(IRawConfiguration config, String activeSection)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

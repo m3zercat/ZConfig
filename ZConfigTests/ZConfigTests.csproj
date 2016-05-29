@@ -61,6 +61,7 @@
     <Compile Include="Interpretation\Tests\InterpretationTests.cs" />
     <Compile Include="Parser\Tests\ParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\ZConfigTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ZConfig\ZConfig.csproj">
@@ -70,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Tests\config.zcf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
