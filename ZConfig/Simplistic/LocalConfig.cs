@@ -8,7 +8,7 @@ namespace ZConfig.Simplistic
     public class LocalConfig<T> : IDisposable where T : class, new()
     {
         private readonly string _configFilePath;
-        public LocalConfig(string configFilePath)
+        public LocalConfig(string configFilePath=null)
         {
             var isSerializable = Attribute.GetCustomAttribute(typeof(T), typeof(SerializableAttribute)) != null;
 
