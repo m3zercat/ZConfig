@@ -9,6 +9,7 @@ namespace ZConfig.Interpretation.Tests
     [SuppressMessage("ReSharper", "InconsistentNaming")]
     public class InterpretationTests
     {
+        [Ignore] //TODO make this ready
         [TestMethod]
         public void T001_WhenIDoSomething()
         {
